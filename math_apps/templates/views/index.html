@@ -1,0 +1,10 @@
+{% extends 'main.html' %}
+{% block title %}Math Apps{% endblock %}
+{% block content %}
+    <h1>Math Apps</h1>
+    <p>Here are some math apps:</p>
+    <ul class="list-group col-2">
+        <li class="list-group-item f"><a href="{% url 'math-calculator' %}">Calculator</a></li>
+        <li class="list-group-item f"><a href="#">Prime Numbers</a></li>
+    </ul>
+{% endblock %}
