@@ -27,10 +27,11 @@ list url yang tersedia:
 <hr />
 Web ini menggunakan:
 
-- Django
-- Bootstrap
-- Font Awesome
-- JQuery
+- <img src="math_apps/static/images/django.svg" width="48px" alt="Django icons" />
+- <img src="math_apps/static/images/bootstrap.svg" width="48px" alt="Bootstrap icons" />
+- <img src="math_apps/static/images/font-awesome.svg" width="48px" alt="Font Awesome icons" />
+- <img src="math_apps/static/images/jquery-plain-wordmark.svg" width="48px" alt="JQuery icons" />
+
 
 <hr />
 Cara menggunakan
