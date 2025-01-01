@@ -31,14 +31,14 @@ Web ini menggunakan:
 - Bootstrap
 - Font Awesome
 - JQuery
-  
+
 <hr />
 Cara menggunakan
 
 - Clone project ini menggunakan command ```git clone https://github.com/kamachiii/django-calculator```
 - Buat virtual env ```python -m venv env```
 - Gunakan virtual env
-  
+
     PowerShell
     ```powershell
     ./env/Scripts/activate.ps1
