@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en" data-bs-theme="light">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -17,7 +17,7 @@
     {% include 'partials/navbar.html' %}
 
     <div class="container">
-        {% block content %}{% endblock content %}
+        {% block content %}{% endblock %}
     </div>
 
     {% include 'partials/footer.html' %}
@@ -25,27 +25,9 @@
     {% comment %} Bootstrap {% endcomment %}
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 
-    {% comment %} JQuery {% endcomment %}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
     {% comment %} Dark Theme {% endcomment %}
-    <script>
-        let docElement = document.documentElement
-        let icon = document.getElementById('theme-toggler')
-        let bodyElement = document.body;
-
-        icon.addEventListener('click',()=>{
-            if (docElement.getAttribute('data-bs-theme') == 'dark') {
-                docElement.setAttribute('data-bs-theme','light')
-                icon.classList.remove('fa-sun')
-                icon.classList.add('fa-moon')
-            }
-            else {
-                docElement.setAttribute('data-bs-theme','dark')
-                icon.classList.remove('fa-moon')
-                icon.classList.add('fa-sun')
-            }
-        });
-    </script>
+    <script src="{% static 'js/darkTheme.js' %}"></script>
+    {% block scripts %}{% endblock %}
 </body>
 </html>

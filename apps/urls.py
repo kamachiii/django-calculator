@@ -22,11 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
 
     # Math Apps
-    path(
-        "math/",
-        include([
-            path("", math_views.index, name="math-index"),
-            path("calculator/", math_views.calculator, name="math-calculator"),
-        ]),
-    ),
+    path("math/",include("math_apps.urls")),
 ]

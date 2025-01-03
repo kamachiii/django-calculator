@@ -10,6 +10,10 @@ def calculator(request):
         if 'clear' in userInput:
             request.session['history'] = []
             return render(request, 'views/calculator.html')
+        elif 'result' in userInput:
+            result = request.POST.get('result', '')
+
+            return render(request, 'views/calculator.html', {'result': result})
         else:
             try:
                 operation = userInput['operation']
@@ -21,9 +25,9 @@ def calculator(request):
                 elif operation == 'subtract':
                     expression = num1 + '-' + num2
                 elif operation == 'multiply':
-                    expression = num1 + '*' + num2
+                    expression = num1 + '×' + num2
                 elif operation == 'divide':
-                    expression = num1 + '/' + num2
+                    expression = num1 + '÷' + num2
                 else:
                     expression = 'Error'
 

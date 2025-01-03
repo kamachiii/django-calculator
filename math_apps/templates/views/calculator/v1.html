@@ -1,0 +1,27 @@
+<div class="card shadow col-lg-7 col-md-9 col-11 mx-auto my-5">
+    <div class="card-body container">
+        <h2 class="text-center text-bold">Calculator <i class="fa-solid fa-calculator"></i></h2>
+        <form action="" method="post" class="mt-4 row d-flex justify-content-center">
+            {% csrf_token %}
+            <div class="col-lg-5 col-4 p-0 form-floating">
+                <input class="form-control" type="text" id="number1" name="num1" placeholder="Input Number...." value="{{ num1 }}" />
+                <label for="number1">Number 1</label>
+            </div>
+            <div class="col-auto d-flex align-items-center">
+                <select name="operation" class="form-select form-select-lg">
+                    <option value="add">+</option>
+                    <option value="subtract">-</option>
+                    <option value="multiply">×</option>
+                    <option value="divide">÷</option>
+                </select>
+            </div>
+            <div class="col-lg-5 col-4 p-0 form-floating">
+                <input class="form-control" type="text" id="number2" name="num2" placeholder="Input Number...." value="{{ num2 }}" />
+                <label for="number2">Number 2</label>
+            </div>
+            <div class="col-12 text-center mt-4">
+                <button class="btn btn-primary fw-bold w-100" type="submit">Calculate</button>
+            </div>
+        </form>
+    </div>
+</div>
